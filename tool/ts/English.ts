@@ -214,6 +214,16 @@
         <translation>Save polygon information in coco format</translation>
     </message>
     <message>
+        <location filename="../../eiseg/app.py" line="409"/>
+        <source>&amp;显示遥感多边形</source>
+        <translation>&amp;Display RS polygons</translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="409"/>
+        <source>显示遥感大图多边形</source>
+        <translation>Display RS large polygon</translation>
+    </message>
+    <message>
         <location filename="../../eiseg/app.py" line="411"/>
         <source>&amp;抠图保存</source>
         <translation>&amp;Save Matting</translation>
@@ -232,6 +242,16 @@
         <location filename="../../eiseg/app.py" line="424"/>
         <source>抠图后背景像素的颜色</source>
         <translation>The color to use for all background pixels</translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="442"/>
+        <source>&amp;设置十字丝颜色</source>
+        <translation>&amp;Set cross wire color</translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="447"/>
+        <source>十字丝的显示颜色</source>
+        <translation>The color of crosshair</translation>
     </message>
     <message>
         <location filename="../../eiseg/app.py" line="427"/>
@@ -402,6 +422,21 @@
         <location filename="../../eiseg/app.py" line="550"/>
         <source>用于观察软件执行过程和进行debug。我们不会自动收集任何日志，可能会希望您在反馈问题时间打开此功能，帮助我们定位问题。</source>
         <translation>It is used to observe the software execution process and debug. We don&apos;t automatically collect any logs. We may want you to turn on this function when you feed back the problem to help us locate the problem.</translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="551"/>
+        <source>&amp;使用QT文件窗口</source>
+        <translation>Use QT file window</translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="551"/>
+        <source>如果使用文件选择窗口时遇到问题可以选择使用Qt窗口</source>
+        <translation>If you encounter problems using the file selection window, you can choose to use the QT window.</translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="578"/>
+        <source>语言</source>
+        <translation>Language</translation>
     </message>
     <message>
         <location filename="../../eiseg/app.py" line="653"/>
@@ -583,6 +618,26 @@
         <location filename="../../eiseg/app.py" line="1203"/>
         <source>打开遥感图像需启用遥感组件，是否立即启用？</source>
         <translation>The remote sensing component needs to be enabled to open the remote sensing image. Do you want to enable it now?</translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="1238"/>
+        <source>● 波段数：</source>
+        <translation>● Number of bands: </translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="1238"/>
+        <source>● 数据类型：</source>
+        <translation>● Data type: </translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="1238"/>
+        <source>● 行数：</source>
+        <translation>● Number of rows: </translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/app.py" line="1238"/>
+        <source>● 列数：</source>
+        <translation>● Number of columns: </translation>
     </message>
     <message>
         <location filename="../../eiseg/app.py" line="1213"/>
@@ -828,6 +883,11 @@
         <location filename="../../eiseg/ui.py" line="287"/>
         <source>完成宫格</source>
         <translation>Complete the grid</translation>
+    </message>
+    <message>
+        <location filename="../../eiseg/ui.py" line="291"/>
+        <source>保存每个宫格的标签</source>
+        <translation>Save all of grids</translation>
     </message>
     <message>
         <location filename="../../eiseg/ui.py" line="316"/>

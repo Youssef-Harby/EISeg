@@ -13,8 +13,10 @@
 # limitations under the License.
 
 
+from PyQt5.QtCore import QPointF
 from qtpy import QtWidgets, QtCore
 from qtpy.QtCore import Qt
+from qtpy.QtGui import QPen, QColor
 
 
 class AnnotationScene(QtWidgets.QGraphicsScene):
@@ -24,6 +26,15 @@ class AnnotationScene(QtWidgets.QGraphicsScene):
         super(AnnotationScene, self).__init__(parent)
         self.creating = False
         self.polygon_items = []
+        # draw cross
+        self.coords = None
+        self.pen = QPen()
+        self.pen.setWidth(1)
+        self.pen.setColor(QColor(0, 0, 0, 127))
+
+    def setPenColor(self, color_list):
+        R, G, B, A = color_list
+        self.pen.setColor(QColor(R, G, B, A))
 
     def updatePolygonSize(self):
         for poly in self.polygon_items:
@@ -57,6 +68,17 @@ class AnnotationScene(QtWidgets.QGraphicsScene):
                 ev.scenePos(),
             )
         super(AnnotationScene, self).mouseMoveEvent(ev)
+
+    def drawForeground(self, painter, rect):
+        if self.coords is not None and self.coords != QPointF(-1, -1):
+            painter.setClipRect(rect)
+            painter.setPen(self.pen)
+            painter.drawLine(self.coords.x(), rect.top(), self.coords.x(), rect.bottom())
+            painter.drawLine(rect.left(), self.coords.y(), rect.right(), self.coords.y())
+
+    def onMouseChanged(self, pointf):
+        self.coords = pointf
+        self.invalidate()
 
     @property
     def item_hovering(self):
